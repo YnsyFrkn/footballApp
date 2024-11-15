@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header.jsx */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.search-btn button {
+  color: black;
+
+  margin-left: 10px;
+}
+
+.search-btn input {
+  padding: 9px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .link {
+    margin-top: 20px;
+  }
+  .search-btn {
+    margin-top: 20px;
+  }
+  .logo {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Header.jsx bitişi */
+
+/* LoginPages.jsx */
+
+.main {
+  width: 100%;
+  height: 80vh;
+  background-image: url(./assets/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; /* Pozisyonu ayarlıyoruz */
+  background-attachment: fixed;
+}
+
+.main::before {
+  /* Yarı saydam beyaz katmanı ekliyoruz */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.3); /* Beyaz rengin %30 saydamlığı */
+  z-index: 1; /* Katmanın arka planın üzerinde olmasını sağlıyoruz */
+}
+
+.main::after {
+  /* Yarı saydam siyah katmanı ekliyoruz */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Siyah rengin %50 saydamlığı */
+  z-index: 2; /* Bu katmanı yukarıda tutuyoruz */
+}
+
+.stepOne {
+  display: flex;
+  justify-content: space-around;
+
+  align-items: center;
+  margin-top: 250px;
+  width: 100%;
+  position: relative; /* Bu kutunun pozisyonunu ayarlıyoruz */
+  z-index: 3; /*Bu katmanı en yukarıda tutuyoruz */
+}
+
+.text-setting {
+  color: aliceblue;
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 5px;
+  width: 500px;
+  box-shadow: 2px 3px 4px 6px;
+}
+
+.text-setting h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+.text-setting p {
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 10px;
+  text-align: center;
+  word-spacing: 5px;
+  line-height: 25px;
+}
+
+@media (max-width: 1000px) {
+  .stepOne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 90px;
+  }
+
+  .text-setting {
+    max-width: 400px;
+    margin-top: 40px;
+  }
+}
+/* LoginPages.jsx bitişi*/
+
+/* Footer.jsx  */
+
+.description {
+  margin-top: -150px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.setFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  padding: 50px;
+  background-color: black;
+  color: white;
+}
+.icons {
+  font-size: 35px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.edit {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+.edit p,
+h1,
+h6 {
+  margin-top: 10px;
+}
+
+@media (max-width: 1000px) {
+  .description {
+    margin-top: -307px;
+  }
+}
+/* Footer.jsx  bitişi*/
+
+/*bg */
+
+.background {
+  background: #efefbb;
+  background: -webkit-linear-gradient(to bottom, #d4d3dd, #efefbb);
+  background: linear-gradient(to bottom, #d4d3dd, #efefbb);
+}
+
+/*icon color*/
+
+.icons .instagram:hover {
+  color: #e1306c;
+  transition: all 0.4s;
+}
+.icons .twitter:hover {
+  color: #1da1f2;
+  transition: all 0.4s;
+}
+.icons .facebook:hover {
+  color: #1877f2;
+  transition: all 0.4s;
+}
+.icons .youtube:hover {
+  color: #ff0000;
+  transition: all 0.4s;
+}
